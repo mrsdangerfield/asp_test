@@ -1,0 +1,48 @@
+/**
+ * Utility styles
+ */
+@import "./_third-party/_normalize.scss";
+@import "./_third-party/_sass-mq.scss";
+@import "./_tools/_mixins.scss";
+@import "./_tools/_helpers.scss";
+@import "./_base/_base.scss";
+@import "./_media/_print.scss";
+
+
+/**
+ * Component styles
+*/
+@import "../../components/NavigationView/NavigationView.scss";
+@import "../../components/ToolbarView/ToolbarView.scss";
+@import "../../components/TaskDashboardView/TaskDashboardView.scss";
+@import "../../components/AccordionView/AccordionView.scss";
+@import "../../components/TabbedView/TabbedView.scss";
+
+
+/**
+ * SASS MQ settings
+ */
+
+$mq-responsive: true;
+
+$mq-breakpoints: (
+  mobile: 320px,
+  midMobile: 390px,
+  tablet: 700px,
+  desktop: 980px,
+  desktopMid: 1135px,
+  desktopWide: 1400px,
+  desktopXL: 1512px,
+);
+
+$mq-static-breakpoint: desktop;
+
+$mq-show-breakpoints: (
+  mobile,
+  midMobile,
+  tablet,
+  desktop,
+  desktopMid,
+  desktopWide,
+  desktopXL
+);

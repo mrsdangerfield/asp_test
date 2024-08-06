@@ -1,0 +1,152 @@
+* {
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+:root {
+    font-family: sans-serif;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 400;
+
+    --var-white: #ffffff;
+	--var-black: #000000;
+    --var-navyblue:#213344;
+    --var-gray: #efeff2;
+    --var-purple: #7b4d99;
+    --var-purple-light: #f6f2f8;
+    --var-orange:#feb200;
+    --var-green: #02a986;
+    --var-red: #a93c1f;
+
+    color: var(--var-navyblue);
+	background-color: var(--var-gray);
+}
+
+
+/* base level styles
+   ========================================================================== */
+.asp__app {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.asp__section {
+    width: 100%;
+    background-color: var(--var-white);
+    border-radius: 20px;
+    padding: 5%;
+    margin-bottom: 3%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+    @include mq($from: desktopMid) {
+        padding: 2% 5% 5% 5%;
+    }
+}
+
+.asp__section-title {
+    width: 100%;
+    @include fontSize(18px);
+    font-weight: 700;
+    margin-top: 2%;
+    margin-bottom: 4%;
+    @include mq($from: desktopMid) {
+        @include fontSize(24px);
+    }
+}
+
+.asp__btn--primary {
+    width: 86%;
+    background-color: var(--var-purple);
+    color: var(--var-white);
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    padding: 14px 20px 14px 40px;
+    margin: 6% auto;
+    border-radius: 15px;
+    cursor: pointer;
+    display: block;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        color: var(--var-purple);
+        background-color: var(--var-white);
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+/* header styles
+   ========================================================================== */
+
+   .asp__header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    grid-column: span 5;
+   }
+
+   .asp__header-img {
+    width: 100%;
+    height: auto;
+   }
+
+   /* Aside styles
+   ========================================================================== */
+
+   .asp__sidebar {
+    width: 100%;
+    background-color: var(--var-white);
+    position: relative;
+    z-index: 2;
+    border-top-right-radius: 50px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+    grid-column: span 5;
+    @include mq($from: desktopMid) {
+        grid-column: span 1;
+    }
+   }
+
+     /* Main container styles
+   ========================================================================== */
+
+   .asp__main-container {
+        background-color: var(--var-gray);
+        grid-column: span 5;
+        margin-top: 30%;
+        padding: 4%;
+        position: relative;
+        z-index: 5;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 50px;
+        @include mq($from: desktopMid) {
+            grid-column: span 4;
+            padding: 3%;
+            margin-top: 15%;
+        }
+        @include mq($from: desktopWide) {
+            padding: 3% 2% 4% 4%;
+        }
+   }
+   
+   /* main panel styles
+   ========================================================================== */
+    .asp__main-panel {
+        grid-column: span 5;
+        margin-top: 5%;
+        @include mq($from: desktopMid) {
+            grid-column: span 2;
+            margin-top: 0;
+        }
+    }
+
+     /* side panel styles
+   ========================================================================== */
+
+   .asp__side-panel {
+        grid-column: span 5;
+        @include mq($from: desktopMid) {
+            grid-column: span 1;
+        }
+   }

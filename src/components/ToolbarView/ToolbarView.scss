@@ -1,0 +1,36 @@
+.asp__toolbar {
+    width: 85%;
+    background-color: var(--var-gray);
+    padding: 12px;
+    border-top-left-radius: 30px;
+    position: absolute;
+    top: -5%;
+    right: 0;
+    z-index: 3;
+    margin: 0 0 0 0;
+    grid-column: span 3;
+    @include mq($from: desktopMid) {
+        width: 27%;
+    }
+    @include mq($from: desktopWide) {
+        width: 25%;
+    }
+}
+
+.asp__toolbarlist {
+    background-color: var(--var-white);
+    border-radius: 50px;
+}
+
+.asp__toolbarlistitem {
+    width: auto;
+    list-style: none;
+    display: inline-block; 
+    padding: 10px 20px;
+}
+
+.asp__toolbar-anchor {
+    color: var(--var-black);
+    font-weight: 500;
+    text-decoration: none;
+}

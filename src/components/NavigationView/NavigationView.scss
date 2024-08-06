@@ -1,0 +1,89 @@
+.asp__main-nav-bar {
+    width: 100%;
+    
+    hr {
+        color: #b2b1b1;
+    }
+
+    @include mq($from: desktopMid) {
+        height: 100vh;
+    }
+}
+
+.asp__main-logo-cont {
+    width: 80%;
+    margin: 8% auto;
+}
+
+.asp__main-logo-img {
+    width: 100%;
+    max-width: 112px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+.asp__site-title {
+    @include fontSize(16px);
+    text-align: center;
+    margin: 20px 0;
+}
+
+.asp__navitemlist {
+    width: 100%;
+    margin: 0 0 5% 0;
+    padding: 0;
+    @include mq($from: desktopMid) {
+        margin: 0 0 30% 0;
+    }
+}
+
+.asp__navitemlistitem {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    &:first-child {
+        .asp__nav-anchor:before,
+        .asp__nav-anchor:after {
+            display: none;
+        }
+    }
+}
+
+.asp__nav-anchor {
+    color: #000;
+    text-decoration: none;
+    display: block;
+    padding: 14px 95px 14px 42px;
+    position: relative;
+    &:after {
+        width: 10px;
+        height: 10px;
+        content:' ';
+        display: inline-block;
+        border-bottom: 1px solid #000000;
+        border-right: 1px solid #000000;
+        transform: rotate(45deg);
+        position: absolute;
+        top: 38%;
+        right: 20px;
+    }
+
+    &:hover {
+        background: var(--var-purple-light);
+        font-weight: 700;
+    }
+    &.active {
+        background: var(--var-purple-light);
+        font-weight: 700;
+    }
+}
+
+.asp__download-ind {
+    width: 86%;
+    background: #f8f8f9;
+    margin: 0 auto;
+    border: 1px solid #b8b8b9;
+    border-radius: 20px;
+}
